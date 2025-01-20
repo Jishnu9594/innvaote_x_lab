@@ -13121,3 +13121,121 @@ html {
     display: block;
   }
 }
+/* Services Section Styling */
+.services-section {
+  padding: 80px 20px;
+  background-color: #ffffff; /* White background */
+  text-align: left;
+  color: #181818; /* Dark text for contrast */
+}
+
+.services-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #181818;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  padding-left: 20px; /* Align heading to the left */
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 30px;
+  padding: 0 20px;
+  margin-top: 30px;
+}
+
+.service-card {
+  width: 100%;
+  height: 400px;
+  perspective: 1000px; /* Enable 3D effect */
+  transition: all 0.3s ease;
+}
+
+.service-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.service-card:hover .service-card-inner {
+  transform: rotateY(180deg); /* Flip card on hover */
+}
+
+.service-card-front,
+.service-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-card-front {
+  background: linear-gradient(135deg, #1e90ff, #00c6ff); /* Blue gradient */
+}
+
+.service-card-back {
+  background: #333; /* Darker background for the back */
+  color: #ffffff;
+  transform: rotateY(180deg); /* Hide back face initially */
+  padding-top: 50px;
+}
+
+.service-icon {
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr 1fr; /* 2 cards per row on mobile */
+  }
+
+  .services-title {
+    font-size: 2.5rem;
+  }
+
+  .service-icon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    grid-template-columns: 1fr; /* 1 card per row on very small devices */
+  }
+
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+  }
+}
