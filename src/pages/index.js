@@ -4,6 +4,8 @@ import Navbar from "./navbar";
 import HeroSection from "./hero";
 import ServicesSection from "./services";
 import AboutUs from "./about";
+import CaseStudyPage from "./works";
+import ClientsSection from "./clients";
 
 function Index() {
   return (
@@ -14,6 +16,8 @@ function Index() {
         <HeroSection />
         <AboutUs />
         <ServicesSection />
+        <CaseStudyPage />
+        <ClientsSection />
       </>
     </Fragment>
   );

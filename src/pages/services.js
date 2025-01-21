@@ -4,8 +4,8 @@ import {
   FaPaintBrush,
   FaBullhorn,
   FaSearch,
-  FaUserAlt,
   FaCog,
+  FaUserAlt,
 } from "react-icons/fa";
 
 const ServicesSection = () => {
@@ -14,54 +14,51 @@ const ServicesSection = () => {
       icon: <FaLaptopCode />,
       title: "Web App Development",
       description:
-        "We build highly functional and scalable web applications tailored to your needs.",
+        "Develop powerful and scalable web apps to drive your business forward.",
     },
     {
       icon: <FaPaintBrush />,
-      title: "Web Design",
+      title: "UI/UX Design",
       description:
-        "Crafting modern, user-friendly designs to elevate your brand and engage users.",
+        "Design beautiful and intuitive user interfaces that users love.",
     },
     {
       icon: <FaBullhorn />,
       title: "Digital Marketing",
       description:
-        "Implementing effective strategies to grow your online presence and reach a wider audience.",
+        "Reach a wider audience and grow your brand with targeted digital marketing strategies.",
     },
     {
       icon: <FaSearch />,
-      title: "SEO Services",
+      title: "SEO Optimization",
       description:
-        "Optimizing your website for search engines to boost your visibility and ranking.",
-    },
-    {
-      icon: <FaUserAlt />,
-      title: "UI/UX Design",
-      description:
-        "Creating intuitive and delightful user interfaces and experiences for your users.",
+        "Optimize your website to rank higher in search engines and drive traffic.",
     },
     {
       icon: <FaCog />,
-      title: "Software Development",
+      title: "Custom Software Solutions",
       description:
-        "Custom software solutions to automate business processes and improve efficiency.",
+        "Delivering high-quality, tailor-made software solutions for your business.",
+    },
+    {
+      icon: <FaUserAlt />,
+      title: "Consulting Services",
+      description:
+        "Expert advice to streamline your business processes and improve efficiency.",
     },
   ];
 
   return (
     <section className="services-section">
-      <h2 className="services-title">Our Services</h2>
+      <h2 className="section-title">Services</h2>
       <div className="services-container">
         {services.map((service, index) => (
           <div key={index} className="service-card">
-            <div className="service-card-inner">
-              <div className="service-card-front">
-                <div className="service-icon">{service.icon}</div>
-                <h3 className="service-title">{service.title}</h3>
-              </div>
-              <div className="service-card-back">
-                <p className="service-description">{service.description}</p>
-              </div>
+            <div className="service-card-content">
+              <div className="service-card-icon">{service.icon}</div>
+              <h3 className="service-card-title">{service.title}</h3>
+              <p className="service-card-description">{service.description}</p>
+              <button className="service-card-button">Read More</button>
             </div>
           </div>
         ))}

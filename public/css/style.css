@@ -12964,24 +12964,27 @@ textarea.form-control {
 }
 
 /* General Reset */
-body,
-html {
+/* Global Styles */
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "__PRIMARY_FONT_e530d6", "__PRIMARY_FONT_Fallback_e530d6",
+    sans-serif; /* Primary font */
+  background-color: #fff; /* White background */
 }
 
+/* Section Styling */
 .our-story-section {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(135deg, #0f0f0f, #212121);
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: #ffffff;
-  overflow: hidden; /* To contain animations */
+  color: #000; /* Black text color */
+  overflow: hidden; /* Contain animations */
 }
 
 /* Animated Scattered Icons */
@@ -12998,18 +13001,60 @@ html {
 .animated-icon {
   position: absolute;
   font-size: 3rem;
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0.1); /* Subtle black icons */
   animation: scatter 12s infinite ease-in-out;
 }
 
-.animated-icon:nth-child(even) {
-  animation-duration: 10s;
-  font-size: 2.5rem;
+/* Left Content Section */
+.our-story-left {
+  z-index: 2;
+  max-width: 500px;
 }
 
-.animated-icon:nth-child(odd) {
-  animation-duration: 15s;
+.our-story-title {
   font-size: 3.5rem;
+  font-weight: bold;
+  color: #000; /* Black heading */
+  font-family: "__Taviraj_5200b3", "__Taviraj_Fallback_5200b3", serif; /* Secondary font */
+  margin-bottom: 20px;
+}
+
+.our-story-content {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* About Us Button */
+.about-us-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: #66cc66; /* Green background */
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(102, 204, 102, 0.5);
+  transition: all 0.4s ease;
+}
+
+.about-us-button:hover {
+  background: #4caf50; /* Darker green on hover */
+  transform: scale(1.1);
+}
+
+.arrow-icon {
+  font-size: 1.5rem;
+}
+
+/* Logo Animation */
+.our-story-logo img {
+  width: 350px;
+  animation: logoAnimation 5s ease-in-out infinite;
 }
 
 @keyframes scatter {
@@ -13027,87 +13072,28 @@ html {
   }
 }
 
-/* Left Content Section */
-.our-story-left {
-  z-index: 2;
-  max-width: 500px;
-}
-
-.our-story-title {
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: #ffffff; /* White heading */
-  text-shadow: 0 4px 20px rgba(255, 255, 255, 0.6); /* White shadow */
-  margin-bottom: 20px;
-}
-
-.our-story-content {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  color: #d1d1d1;
-  margin-bottom: 30px;
-}
-
-/* About Us Button */
-.about-us-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #fff;
-  background: #66cc66; /* Light Green background */
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(102, 204, 102, 0.5);
-  transition: all 0.4s ease;
-}
-
-.about-us-button:hover {
-  background: #4caf50; /* Darker Green on hover */
-  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.7);
-  transform: scale(1.1);
-}
-
-.arrow-icon {
-  font-size: 1.5rem;
-}
-
-/* Large Animated Logo Section */
-.our-story-logo img {
-  width: 350px;
-  max-width: 100%;
-  animation: logoAnimation 5s ease-in-out infinite; /* Adding animation to the logo */
-}
-
 @keyframes logoAnimation {
   0% {
     transform: scale(1) translateY(0);
   }
   50% {
-    transform: scale(1.05) translateY(-20px); /* Slight zoom and float */
+    transform: scale(1.05) translateY(-20px);
   }
   100% {
     transform: scale(1) translateY(0);
   }
 }
 
-/* Responsive Design Adjustments for Mobile View */
+/* Responsive Design */
 @media (max-width: 768px) {
   .our-story-section {
     flex-direction: column;
+    text-align: left;
     padding: 20px;
-    text-align: left; /* Text starts from the left */
-  }
-
-  .our-story-left {
-    width: 100%; /* Ensure the left section takes full width */
-    padding: 10px;
   }
 
   .our-story-title {
-    font-size: 2.5rem; /* Slightly smaller for better mobile readability */
+    font-size: 2.5rem;
   }
 
   .our-story-content {
@@ -13122,120 +13108,359 @@ html {
   }
 }
 /* Services Section Styling */
+/* General Section Styling */
 .services-section {
   padding: 80px 20px;
-  background-color: #ffffff; /* White background */
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text for better readability */
+  font-family: "__PRIMARY_FONT_e530d6", "__PRIMARY_FONT_Fallback_e530d6"; /* Apply primary font */
+  animation: fadeIn 1s ease-out; /* Fade-in animation for the whole section */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
   text-align: left;
-  color: #181818; /* Dark text for contrast */
-}
-
-.services-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #181818;
-  margin-bottom: 40px;
+  padding-left: 40px;
   text-transform: uppercase;
-  padding-left: 20px; /* Align heading to the left */
+  margin-bottom: 40px;
+  color: #ffffff; /* White color for section title */
+  font-family: "__PRIMARY_FONT_e530d6", "__PRIMARY_FONT_Fallback_e530d6"; /* Apply primary font */
 }
 
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Services Container */
 .services-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
   gap: 30px;
-  padding: 0 20px;
+  padding: 0 50px;
   margin-top: 30px;
 }
 
+/* Service Card Styling */
 .service-card {
-  width: 100%;
-  height: 400px;
-  perspective: 1000px; /* Enable 3D effect */
-  transition: all 0.3s ease;
-}
-
-.service-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.service-card:hover .service-card-inner {
-  transform: rotateY(180deg); /* Flip card on hover */
-}
-
-.service-card-front,
-.service-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+  background: linear-gradient(
+    135deg,
+    #1e90ff,
+    #ff6347
+  ); /* Gradient background */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 30px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  cursor: pointer;
+  opacity: 0;
+  animation: slideUp 0.6s ease-out forwards; /* Slide-up effect on card */
+  animation-delay: 0.2s;
 }
 
-.service-card-front {
-  background: linear-gradient(135deg, #1e90ff, #00c6ff); /* Blue gradient */
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.service-card-back {
-  background: #333; /* Darker background for the back */
-  color: #ffffff;
-  transform: rotateY(180deg); /* Hide back face initially */
-  padding-top: 50px;
+/* Card Hover Animation */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.service-icon {
-  font-size: 3.5rem;
-  color: #ffffff;
-  margin-bottom: 20px;
+/* Card Icon Styling */
+.service-card-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #ffffff; /* White icon color */
+  transition: transform 0.3s ease;
 }
 
-.service-title {
+.service-card:hover .service-card-icon {
+  transform: rotate(360deg); /* Rotate icon on hover */
+}
+
+/* Card Title Styling */
+.service-card-title {
   font-size: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ffffff; /* White color for title */
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: "__Taviraj_5200b3", "__Taviraj_Fallback_5200b3"; /* Apply secondary font */
 }
 
-.service-description {
+/* Card Description Styling */
+.service-card-description {
   font-size: 1rem;
-  color: #ddd;
-  line-height: 1.6;
+  color: #f8f8f8; /* Light text color for description */
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "__Taviraj_5200b3", "__Taviraj_Fallback_5200b3"; /* Apply secondary font */
 }
 
-/* Media Queries for Mobile Devices */
+/* Button Styling */
+.service-card-button {
+  background-color: #ffffff;
+  color: #333333; /* Dark text for better readability */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card-button:hover {
+  background-color: #1e90ff;
+  color: #ffffff;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .services-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 cards per row on medium screens */
+  }
+}
+
 @media (max-width: 768px) {
   .services-container {
-    grid-template-columns: 1fr 1fr; /* 2 cards per row on mobile */
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
   }
 
-  .services-title {
+  .section-title {
+    font-size: 2rem;
+    padding-left: 20px; /* Adjust left padding */
+  }
+}
+/* General Section Styling */
+.case-study-section {
+  padding: var(--pt, 50px) 0 var(--pb, 50px); /* Custom padding using variables */
+  --bg: #fff; /* White background */
+  --color: #000; /* Black text color */
+  position: relative;
+  background-color: var(--bg); /* Set background color to white */
+  color: var(--color); /* Set text color to black */
+  transition: background-color 0.6s ease; /* Smooth background transition */
+  overflow: hidden; /* Hide any overflow */
+  font-family: "__PRIMARY_FONT_e530d6", "__PRIMARY_FONT_Fallback_e530d6",
+    sans-serif; /* Primary font */
+}
+
+/* Header Styling */
+.case-study-header {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 40px; /* Left padding for header */
+}
+
+.header-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color); /* Black text */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-family: "__Taviraj_5200b3", "__Taviraj_Fallback_5200b3", serif; /* Secondary font for header */
+}
+
+/* Case Study List Styling */
+.case-study-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards in a row */
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Case Study Item Styling */
+.case-study-item {
+  background-color: #fff; /* White background for cards */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-study-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Case Study Image Styling */
+.case-study-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-bottom: 2px solid #f0f0f0; /* Light border for separation */
+}
+
+.case-study-item:hover .case-study-image {
+  transform: scale(1.05);
+}
+
+/* Case Study Info Styling */
+.case-study-info {
+  padding: 20px;
+  background-color: #f8f8f8; /* Light gray background for info section */
+  color: var(--color); /* Black text */
+  flex-grow: 1;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.case-study-item:hover .case-study-info {
+  background-color: #f0f0f0; /* Slightly lighter when hovered */
+}
+
+.case-study-title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--color);
+  margin-bottom: 15px;
+  font-family: "__Taviraj_5200b3", "__Taviraj_Fallback_5200b3", serif; /* Secondary font for title */
+}
+
+.case-study-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  font-family: "__PRIMARY_FONT_e530d6", "__PRIMARY_FONT_Fallback_e530d6",
+    sans-serif; /* Primary font for description */
+}
+
+.case-study-link {
+  text-decoration: none;
+  color: #1e90ff;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.case-study-link:hover {
+  color: #ff6347;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .case-study-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-study-list {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+}
+
+/* Clients Section Styling */
+.clients-section {
+  padding: 80px 0;
+  background-color: #000; /* Black background */
+  color: #fff;
+  text-align: center; /* Centered content */
+  overflow: hidden;
+  font-family: "__PRIMARY_FONT_e530d6", "__PRIMARY_FONT_Fallback_e530d6",
+    sans-serif; /* Primary font for body */
+}
+
+/* Header Section */
+.clients-header {
+  margin-bottom: 60px;
+}
+
+.clients-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-left: 30px; /* Adding space on the left */
+  text-align: left;
+  margin-left: 50px; /* Keep heading aligned from left side */
+  font-family: "__Taviraj_5200b3", "__Taviraj_Fallback_5200b3", serif; /* Secondary font for title */
+}
+
+/* Logo Grid Layout */
+.clients-logo-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.client-logo {
+  max-width: 150px; /* Fixed size for logos */
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect for logos */
+.client-logo:hover {
+  transform: translateY(-10px); /* Slight upward movement */
+  opacity: 0.8;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .clients-title {
     font-size: 2.5rem;
   }
 
-  .service-icon {
-    font-size: 3rem;
+  .clients-logo-list {
+    gap: 30px; /* Reduce gap for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .clients-title {
+    font-size: 2rem;
+  }
+
+  .clients-logo-list {
+    gap: 20px; /* Smaller gap for mobile */
   }
 }
 
 @media (max-width: 480px) {
-  .services-container {
-    grid-template-columns: 1fr; /* 1 card per row on very small devices */
-  }
-
-  .services-title {
-    font-size: 2rem;
-  }
-
-  .service-icon {
-    font-size: 2.5rem;
+  .clients-logo-list {
+    justify-content: space-evenly; /* Align logos with more spacing on small screens */
   }
 }
