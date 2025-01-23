@@ -6,18 +6,20 @@ import ServicesSection from "./services";
 import AboutUs from "./about";
 import CaseStudyPage from "./works";
 import ClientsSection from "./clients";
+import TeamSection from "./team";
 
 function Index() {
   return (
     <Fragment>
       <>
-        <ContactSection />
-        <Navbar />
         <HeroSection />
+        <Navbar />
+
         <AboutUs />
         <ServicesSection />
         <CaseStudyPage />
         <ClientsSection />
+        <TeamSection />
       </>
     </Fragment>
   );

@@ -1,67 +1,73 @@
 import React from "react";
 import {
-  FaLaptopCode,
-  FaPaintBrush,
-  FaBullhorn,
+  FaCode,
   FaSearch,
+  FaBullhorn,
+  FaChalkboardTeacher,
   FaCog,
-  FaUserAlt,
+  FaUsersCog,
+  FaArrowRight, // Import arrow icon
 } from "react-icons/fa";
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: <FaLaptopCode />,
-      title: "Web App Development",
+      icon: <FaCode />,
+      title: "Web Development",
       description:
-        "Develop powerful and scalable web apps to drive your business forward.",
+        "Developing cutting-edge websites with the latest technologies for optimal performance.",
     },
     {
-      icon: <FaPaintBrush />,
-      title: "UI/UX Design",
+      icon: <FaSearch />,
+      title: "SEO",
       description:
-        "Design beautiful and intuitive user interfaces that users love.",
+        "Optimizing websites to rank higher on search engines and drive organic traffic.",
     },
     {
       icon: <FaBullhorn />,
       title: "Digital Marketing",
       description:
-        "Reach a wider audience and grow your brand with targeted digital marketing strategies.",
+        "Creating and executing strategic marketing campaigns to increase your brand presence online.",
     },
     {
-      icon: <FaSearch />,
-      title: "SEO Optimization",
+      icon: <FaChalkboardTeacher />,
+      title: "Training",
       description:
-        "Optimize your website to rank higher in search engines and drive traffic.",
+        "Offering specialized training programs to help you and your team stay ahead in the tech industry.",
     },
     {
       icon: <FaCog />,
       title: "Custom Software Solutions",
       description:
-        "Delivering high-quality, tailor-made software solutions for your business.",
+        "Providing tailored software solutions to fit your unique business needs and workflows.",
     },
     {
-      icon: <FaUserAlt />,
+      icon: <FaUsersCog />,
       title: "Consulting Services",
       description:
-        "Expert advice to streamline your business processes and improve efficiency.",
+        "Helping businesses optimize their strategies, improve performance, and drive growth through expert consulting.",
     },
   ];
 
   return (
     <section className="services-section">
-      <h2 className="section-title">Services</h2>
+      <h2 className="section-title">Our Expertise</h2>
       <div className="services-container">
         {services.map((service, index) => (
           <div key={index} className="service-card">
-            <div className="service-card-content">
-              <div className="service-card-icon">{service.icon}</div>
-              <h3 className="service-card-title">{service.title}</h3>
-              <p className="service-card-description">{service.description}</p>
-              <button className="service-card-button">Read More</button>
-            </div>
+            <div className="service-card-icon">{service.icon}</div>
+            <h3 className="service-card-title">{service.title}</h3>
+            <p className="service-card-description">{service.description}</p>
+            <a href="#learn-more" className="service-card-button">
+              Learn More
+            </a>
           </div>
         ))}
+      </div>
+      <div className="view-all-services-container">
+        <button className="view-all-services-button">
+          View All Services <FaArrowRight />
+        </button>
       </div>
     </section>
   );

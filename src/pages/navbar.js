@@ -1,82 +1,95 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav
-      className="navbar navbar-expand-lg ftco_navbar ftco-navbar-light"
-      id="ftco-navbar"
+      className={`navbar navbar-expand-lg fixed-top ${
+        isScrolled ? "navbar-scrolled" : ""
+      }`}
     >
       <div className="container">
-        {/* Brand */}
-        <a className="navbar-brand" href="index.html">
-          INNOVATE_X<span>LABS</span>
+        {/* Logo */}
+        <a className="navbar-brand" href="#home">
+          <img
+            src="" // Add your logo URL here
+            alt="Logo"
+            className="navbar-logo"
+          />
         </a>
 
-        {/* Toggle Button for Mobile */}
+        {/* Mobile Menu Toggle */}
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#ftco-nav"
-          aria-controls="ftco-nav"
-          aria-expanded="false"
+          onClick={toggleMobileMenu}
+          aria-controls="navbarNav"
+          aria-expanded={isMobileMenuOpen ? "true" : "false"}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Collapsible Navbar */}
-        <div className="collapse navbar-collapse" id="ftco-nav">
+        {/* Navbar Items */}
+        <div
+          className={`collapse navbar-collapse ${
+            isMobileMenuOpen ? "show" : ""
+          }`}
+          id="navbarNav"
+        >
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item active">
-              <a href="index.html" className="nav-link">
+            <li className="nav-item">
+              <a href="#home" className="nav-link">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a href="about.html" className="nav-link">
+              <a href="#about" className="nav-link">
                 About
               </a>
             </li>
             <li className="nav-item">
-              <a href="services.html" className="nav-link">
+              <a href="#services" className="nav-link">
                 Services
               </a>
             </li>
             <li className="nav-item">
-              <a href="blog.html" className="nav-link">
+              <a href="#blog" className="nav-link">
                 Blog
               </a>
             </li>
             <li className="nav-item">
-              <a href="contact.html" className="nav-link">
-                Contact Us
+              <a href="#contact" className="nav-link">
+                Contact
               </a>
             </li>
             <li className="nav-item">
-              <a href="careers.html" className="nav-link">
+              <a href="#careers" className="nav-link">
                 Careers
               </a>
             </li>
             <li className="nav-item">
-              <a href="testimonials.html" className="nav-link">
-                Testimonials
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="partnership.html" className="nav-link">
-                Partnership
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="works.html" className="nav-link">
-                Works
-              </a>
-            </li>
-            <li className="nav-item cta">
-              <a href="#" className="nav-link">
+              <a href="#consultation" className="nav-link cta-button">
                 Free Consultation
               </a>
             </li>

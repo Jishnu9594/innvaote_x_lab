@@ -15,7 +15,7 @@ const ClientsSection = () => {
   return (
     <section className="clients-section">
       <div className="clients-header">
-        <h2 className="clients-title">Our Clients</h2>
+        <h2 className="clients-title">Clients</h2>
       </div>
 
       <div className="clients-logo-list">
