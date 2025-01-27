@@ -12948,167 +12948,6 @@ textarea.form-control {
   color: #6c757d;
 }
 
-/* Team Section */
-.team-member img {
-  max-width: 200px;
-  border-radius: 50%;
-  border: 4px solid #007bff;
-}
-
-.team-member h5 {
-  font-size: 1.25rem;
-}
-
-.team-member p {
-  color: #6c757d;
-}
-
-/* General Reset */
-/* Global Styles */
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif; /* Elegant modern font */
-}
-
-/* Section Styling */
-.our-story-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff; /* White text color for contrast */
-  background: linear-gradient(
-    to bottom,
-    #ffffff,
-    #8a2be2
-  ); /* White to Violet gradient */
-}
-
-/* Background Gradient */
-.background-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    #ffffff,
-    #8a2be2
-  ); /* White to Violet gradient */
-  z-index: -1;
-}
-
-/* Content Styling */
-.our-story-content {
-  position: relative;
-  z-index: 1;
-  padding: 30px;
-  max-width: 900px;
-  width: 100%;
-  text-align: center;
-}
-
-.our-story-logo img {
-  width: 250px;
-  margin-bottom: 20px;
-  animation: fadeIn 2s ease-out;
-}
-
-.our-story-text-container {
-  margin-top: 20px;
-}
-
-.our-story-title {
-  font-size: 4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff; /* White color for the title */
-  font-family: "Poppins", sans-serif;
-  animation: fadeIn 2s ease-out;
-}
-
-.our-story-description {
-  font-size: 1.2rem;
-  color: #f2f2f2; /* Light gray text */
-  line-height: 1.8;
-  font-family: "Poppins", sans-serif;
-  opacity: 0.9;
-  animation: fadeIn 2.5s ease-out;
-}
-
-/* Animated Scattered Icons */
-.icons-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.animated-icon {
-  position: absolute;
-  font-size: 3rem;
-  color: rgba(255, 255, 255, 0.1); /* Soft white icons */
-  animation: scatter 12s infinite ease-in-out;
-}
-
-/* Icon Animation */
-@keyframes scatter {
-  0% {
-    transform: translateY(0) translateX(0) scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateY(-30px) translateX(30px) scale(1.1);
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(0) translateX(0) scale(1);
-    opacity: 0.8;
-  }
-}
-
-/* FadeIn Animation for Content */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .our-story-title {
-    font-size: 2.5rem;
-  }
-
-  .our-story-description {
-    font-size: 1rem;
-  }
-
-  .background-gradient {
-    background: linear-gradient(
-      to bottom,
-      #ffffff,
-      #8a2be2
-    ); /* White to Violet gradient */
-  }
-
-  .our-story-logo img {
-    width: 200px;
-  }
-}
 /* Main Section Styling */
 .services-section {
   padding: 100px 20px;
@@ -13534,132 +13373,136 @@ textarea.form-control {
     font-size: 0.85rem;
   }
 }
-
-/* Clients Section Styling */
+/* Clients Section */
 .clients-section {
-  padding: 80px 0;
-  background-color: #000;
-  color: #fff;
+  padding: 100px 20px;
+  background: linear-gradient(145deg, #000428, #004e92); /* Trending gradient */
+  color: white;
   text-align: center;
-  overflow: hidden;
-  font-family: "__PRIMARY_FONT_e530d6", "__PRIMARY_FONT_Fallback_e530d6",
-    sans-serif; /* Primary font */
+  font-family: "Roboto", sans-serif;
 }
 
-/* Header Section */
-.clients-title {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #fff;
-  letter-spacing: 1px;
-  padding-left: 30px;
-  text-align: left;
-  margin-left: 50px;
-  font-family: "__Taviraj_5200b3", "__Taviraj_Fallback_5200b3", serif; /* Secondary font */
-}
-
-/* Logo Grid Layout */
-.clients-logo-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  font-family: "__PRIMARY_FONT_e530d6", "__PRIMARY_FONT_Fallback_e530d6",
-    sans-serif; /* Primary font for text, if applicable */
-}
-
-.team-section {
-  padding: 80px 20px;
-  background-color: #f4f4f4;
-  color: #333;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2.5rem;
+/* Header */
+.clients-header {
   margin-bottom: 50px;
-  color: black; /* Updated color */
 }
 
-.team-members {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap; /* Ensures items are responsive on smaller screens */
-}
-
-.team-card {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-  width: 250px;
-  position: relative;
-  margin-bottom: 30px; /* Added margin for better spacing on mobile */
-}
-
-.team-card:hover {
-  transform: translateY(-10px);
-}
-
-.team-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.team-name {
-  font-size: 1.5rem;
-  font-weight: bold;
+.clients-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
   margin-bottom: 10px;
+  animation: fadeInDown 0.8s ease;
 }
 
-.team-position {
-  font-size: 1.1rem;
-  color: #777;
-  margin-bottom: 20px;
+.clients-subtitle {
+  font-size: 1.2rem;
+  color: #d1e6ff;
+  font-weight: 400;
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease;
 }
 
-.social-icons {
+/* Logo Grid */
+.clients-logo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease;
+}
+
+.client-logo-container {
+  width: 150px;
+  height: 100px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 10px;
-  opacity: 0;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: opacity 0.3s ease;
+  background: rgba(255, 255, 255, 0.1); /* Transparent card effect */
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.team-card:hover .social-icons {
-  opacity: 1;
+.client-logo-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.social-icons a {
-  color: #333;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+.client-logo {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: #0077b5;
+.client-logo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
 }
 
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  .team-members {
-    flex-direction: column;
-    align-items: center;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .clients-title {
+    font-size: 2rem;
   }
 
-  .team-card {
-    width: 200px;
+  .clients-subtitle {
+    font-size: 1rem;
+  }
+
+  .clients-logo-list {
+    gap: 30px;
+  }
+
+  .client-logo-container {
+    width: 120px;
+    height: 80px;
   }
 }
+
+@media (max-width: 480px) {
+  .clients-title {
+    font-size: 1.8rem;
+  }
+
+  .clients-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .client-logo-container {
+    width: 100px;
+    height: 70px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Navbar Styling */
 .navbar {
   background-color: transparent;
@@ -13940,5 +13783,583 @@ body {
   .slide-dot {
     width: 10px;
     height: 10px;
+  }
+}
+
+/* Team Section */
+.team-section {
+  padding: 80px 20px;
+  background-color: #f5f5f5;
+  color: #333;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Team Member Card */
+.team-card {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Circular Image for Team Member */
+.team-photo-wrapper {
+  width: 170px;
+  height: 170px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Name and Position */
+.team-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.team-position {
+  font-size: 1.1rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover .social-icons {
+  opacity: 1;
+}
+
+.social-icon {
+  color: #555;
+  font-size: 1.6rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-members {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .team-card {
+    padding: 20px;
+  }
+
+  .team-name {
+    font-size: 1.6rem;
+  }
+
+  .team-position {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-members {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .team-name {
+    font-size: 1.4rem;
+  }
+
+  .team-position {
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    bottom: 10px;
+  }
+}
+
+/* Testimonial Section Software */
+.testimonial-section-software {
+  padding: 100px 20px;
+  background: linear-gradient(145deg, #000428, #004e92); /* Trending gradient */
+  color: #ffffff;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.testimonial-cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 30%;
+  min-width: 280px;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.25);
+}
+
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #ffffff; /* Border for the image */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow around the image */
+}
+
+.testimonial-text {
+  margin-top: 20px;
+}
+
+.testimonial-feedback {
+  font-size: 1.15rem;
+  color: #f0f0f0;
+  font-style: italic;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.testimonial-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffb703; /* Accent color */
+  margin-bottom: 5px;
+}
+
+.testimonial-company {
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+
+/* Background Overlay */
+.testimonial-section-software::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Responsive Design */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+  .testimonial-cards-container {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .testimonial-card {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .testimonial-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .testimonial-feedback {
+    font-size: 1rem;
+  }
+
+  .testimonial-name {
+    font-size: 1rem;
+  }
+
+  .testimonial-company {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .testimonial-section-software {
+    padding: 80px 20px;
+  }
+
+  .testimonial-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .testimonial-cards-container {
+    gap: 15px;
+  }
+
+  .testimonial-card {
+    padding: 15px;
+  }
+
+  .testimonial-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .testimonial-feedback {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-name {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-company {
+    font-size: 0.85rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; /* Elegant modern font */
+}
+
+/* Section Styling */
+.our-story-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; /* White text color for contrast */
+  background: linear-gradient(145deg, #000428, #004e92); /* New gradient */
+}
+
+/* Background Gradient */
+.background-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #000428, #004e92); /* New gradient */
+  z-index: -1;
+}
+
+/* Content Styling */
+.our-story-content {
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.our-story-logo img {
+  width: 250px;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-out;
+}
+
+.our-story-text-container {
+  margin-top: 20px;
+}
+
+.our-story-title {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff; /* White color for the title */
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 2s ease-out;
+}
+
+.our-story-description {
+  font-size: 1.2rem;
+  color: #f2f2f2; /* Light gray text */
+  line-height: 1.8;
+  font-family: "Poppins", sans-serif;
+  opacity: 0.9;
+  animation: fadeIn 2.5s ease-out;
+}
+
+/* Animated Scattered Icons */
+.icons-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.animated-icon {
+  position: absolute;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.1); /* Soft white icons */
+  animation: scatter 12s infinite ease-in-out;
+}
+
+/* Icon Animation */
+@keyframes scatter {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-30px) translateX(30px) scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* FadeIn Animation for Content */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .our-story-title {
+    font-size: 2.5rem;
+  }
+
+  .our-story-description {
+    font-size: 1rem;
+  }
+
+  .background-gradient {
+    background: linear-gradient(145deg, #000428, #004e92); /* New gradient */
+  }
+
+  .our-story-logo img {
+    width: 200px;
+  }
+}
+
+/* General Reset and Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Blog Section Styling */
+.blog-section {
+  padding: 80px 20px;
+  background: linear-gradient(
+    145deg,
+    #000428,
+    #004e92
+  ); /* Gradient background */
+}
+
+/* Blog Header Styling */
+.blog-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.blog-section-description {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-top: 12px;
+}
+
+/* Blog Post Cards */
+.blog-posts-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px; /* Further reduced gap between cards */
+  justify-items: center;
+}
+
+.blog-post-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+}
+
+.blog-post-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.blog-post-image-container {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.blog-post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-post-card:hover .blog-post-image {
+  transform: scale(1.05);
+}
+
+.blog-post-content {
+  padding: 20px;
+}
+
+.blog-post-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.blog-post-excerpt {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.blog-post-link {
+  font-size: 1.1rem;
+  color: #004e92;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.blog-post-link:hover {
+  color: #2f2f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .blog-posts-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-posts-container {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-section-title {
+    font-size: 2rem;
+  }
+
+  .blog-section-description {
+    font-size: 1rem;
   }
 }

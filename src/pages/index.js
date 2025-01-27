@@ -3,10 +3,12 @@ import ContactSection from "./contactsection";
 import Navbar from "./navbar";
 import HeroSection from "./hero";
 import ServicesSection from "./services";
-import AboutUs from "./about";
 import CaseStudyPage from "./works";
 import ClientsSection from "./clients";
 import TeamSection from "./team";
+import TestimonialSection from "./testimonals";
+import OurStorySection from "./about";
+import BlogSection from "./blog";
 
 function Index() {
   return (
@@ -14,12 +16,14 @@ function Index() {
       <>
         <HeroSection />
         <Navbar />
+        <OurStorySection />
 
-        <AboutUs />
         <ServicesSection />
-        <CaseStudyPage />
         <ClientsSection />
+        <CaseStudyPage />
+        <TestimonialSection />
         <TeamSection />
+        <BlogSection />
       </>
     </Fragment>
   );

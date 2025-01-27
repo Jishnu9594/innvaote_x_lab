@@ -32,12 +32,18 @@ const TeamSection = () => {
   ];
 
   return (
-    <div className="team-section">
+    <section className="team-section">
       <h2 className="section-title">Meet Our Team</h2>
       <div className="team-members">
         {teamMembers.map((member, index) => (
           <div className="team-card" key={index}>
-            <img src={member.imgSrc} alt={member.name} className="team-photo" />
+            <div className="team-photo-wrapper">
+              <img
+                src={member.imgSrc}
+                alt={member.name}
+                className="team-photo"
+              />
+            </div>
             <h3 className="team-name">{member.name}</h3>
             <p className="team-position">{member.position}</p>
             <div className="social-icons">
@@ -45,6 +51,7 @@ const TeamSection = () => {
                 href={member.socialLinks.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="social-icon"
               >
                 <i className="fa fa-twitter"></i>
               </a>
@@ -52,6 +59,7 @@ const TeamSection = () => {
                 href={member.socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="social-icon"
               >
                 <i className="fa fa-linkedin"></i>
               </a>
@@ -59,7 +67,7 @@ const TeamSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

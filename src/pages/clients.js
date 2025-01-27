@@ -15,17 +15,21 @@ const ClientsSection = () => {
   return (
     <section className="clients-section">
       <div className="clients-header">
-        <h2 className="clients-title">Clients</h2>
+        <h2 className="clients-title">Trusted by Industry Leaders</h2>
+        <p className="clients-subtitle">
+          Join the companies that trust us to deliver exceptional solutions.
+        </p>
       </div>
 
       <div className="clients-logo-list">
         {clientLogos.map((logo, index) => (
-          <img
-            key={index}
-            className="client-logo"
-            src={logo}
-            alt={`Client ${index + 1}`}
-          />
+          <div key={index} className="client-logo-container">
+            <img
+              className="client-logo"
+              src={logo}
+              alt={`Client ${index + 1}`}
+            />
+          </div>
         ))}
       </div>
     </section>
