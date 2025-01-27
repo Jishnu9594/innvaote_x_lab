@@ -13373,11 +13373,14 @@ textarea.form-control {
     font-size: 0.85rem;
   }
 }
-
 /* Clients Section */
 .clients-section {
   padding: 100px 20px;
-  background: linear-gradient(145deg, #000428, #004e92); /* Trending gradient */
+  background: linear-gradient(
+    145deg,
+    #006400,
+    #2e8b57
+  ); /* Dark green gradient */
   color: white;
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -13400,7 +13403,7 @@ textarea.form-control {
 
 .clients-subtitle {
   font-size: 1.2rem;
-  color: #d1e6ff;
+  color: #d1e6ff; /* Soft light blue for a nice contrast */
   font-weight: 400;
   margin-bottom: 30px;
   animation: fadeInDown 1s ease;
@@ -13934,11 +13937,10 @@ body {
     bottom: 10px;
   }
 }
-
 /* Testimonial Section Software */
 .testimonial-section-software {
   padding: 100px 20px;
-  background: linear-gradient(145deg, #000428, #004e92); /* Trending gradient */
+  background: linear-gradient(145deg, #006400, #2e8b57); /* Trending gradient */
   color: #ffffff;
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -14236,7 +14238,6 @@ body {
     width: 200px;
   }
 }
-
 /* General Reset and Styling */
 * {
   margin: 0;
@@ -14249,9 +14250,9 @@ body {
   padding: 80px 20px;
   background: linear-gradient(
     145deg,
-    #000428,
-    #004e92
-  ); /* Gradient background */
+    #006400,
+    #2e8b57
+  ); /* Dark Green Gradient */
   font-family: "Roboto", sans-serif;
   text-align: center;
   color: #fff; /* White text for contrast */
@@ -14324,7 +14325,7 @@ body {
 .blog-post-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #000428; /* Matches the gradient theme */
+  color: #006400; /* Dark green title for a harmonious look */
   margin-bottom: 10px;
 }
 
@@ -14338,7 +14339,7 @@ body {
 .blog-post-link {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #004e92; /* Matches the gradient theme */
+  background-color: #2e8b57; /* Matches the gradient theme */
   color: #fff;
   border-radius: 25px;
   text-decoration: none;
@@ -14347,7 +14348,7 @@ body {
 }
 
 .blog-post-link:hover {
-  background-color: #002d61;
+  background-color: #1d6f3f;
   box-shadow: 0 5px 15px rgba(0, 78, 146, 0.5);
 }
 
@@ -14439,7 +14440,7 @@ body {
 
 .footer-top-button {
   background-color: transparent; /* Transparent background */
-  color: #fff; /* Light blue text */
+  color: #ffffff; /* Light blue text */
   padding: 18px 40px;
   border: 2px solid #ffffff; /* Light blue border */
   font-size: 1.1rem;
@@ -14549,14 +14550,16 @@ body {
 /* Medium to Large Devices */
 @media (max-width: 768px) {
   .footer-columns {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
   }
 
   .footer-column {
-    width: 100%;
-    margin-bottom: 30px;
+    width: 48%; /* Make each column take up 48% width */
     text-align: center;
+    margin-bottom: 30px;
   }
 
   .footer-logo-img {
@@ -14564,7 +14567,8 @@ body {
   }
 
   .footer-bottom {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -14603,5 +14607,24 @@ body {
 
   .footer-logo-img {
     width: 120px;
+  }
+
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Make columns side by side on mobile */
+    gap: 15px;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
   }
 }
