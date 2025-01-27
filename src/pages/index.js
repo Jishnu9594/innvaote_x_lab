@@ -24,6 +24,7 @@ function Index() {
         <TestimonialSection />
         <TeamSection />
         <BlogSection />
+        <ContactSection />
       </>
     </Fragment>
   );

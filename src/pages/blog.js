@@ -6,21 +6,21 @@ const BlogSection = () => {
       title: "Transforming the Future of Software with AI",
       excerpt:
         "AI is revolutionizing software development, making applications smarter and more efficient. Here's how.",
-      image: "images/blog1.jpg",
+      image: "images/innoavatex4.jpg",
       link: "#",
     },
     {
       title: "The Importance of Cybersecurity in Modern Applications",
       excerpt:
         "In today's digital world, cybersecurity is more important than ever. Learn how to secure your software applications.",
-      image: "images/blog2.jpg",
+      image: "images/innovatex1.jpg",
       link: "#",
     },
     {
       title: "Mastering Cloud Computing for Scalable Solutions",
       excerpt:
         "Cloud computing is the backbone of scalable software solutions. Explore how it's changing the game for developers.",
-      image: "images/blog3.jpg",
+      image: "images/innovatex2.jpg",
       link: "#",
     },
   ];

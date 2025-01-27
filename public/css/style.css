@@ -13139,20 +13139,20 @@ textarea.form-control {
 /* Main Section Styling for Case Studies */
 .case-study-section {
   padding: 100px 20px;
-  background-color: #f4f7fb;
-  background-image: url("https://images.pexels.com/photos/8728380/pexels-photo-8728380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); /* Add your background image */
+  background-color: #ffffff; /* Set background to white */
+  /* background-image: url("https://images.pexels.com/photos/8728380/pexels-photo-8728380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */ /* Remove background image */
   background-size: cover;
   background-position: center;
   font-family: "Roboto", sans-serif;
   text-align: center;
   animation: fadeIn 1s ease-out;
-  color: white; /* Change text color if needed for contrast */
+  color: black; /* Default text color */
 }
 
 .case-study-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #fff;
+  color: #000; /* Heading color set to black */
   margin-bottom: 50px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -13194,13 +13194,13 @@ textarea.form-control {
 .case-study-card-title {
   font-size: 1.75rem;
   font-weight: 600;
-  color: #333;
+  color: #333; /* Keep card title color dark */
   margin-bottom: 20px;
 }
 
 .case-study-card-description {
   font-size: 1rem;
-  color: #666;
+  color: #666; /* Keep description color subtle */
   margin-bottom: 30px;
 }
 
@@ -13373,6 +13373,7 @@ textarea.form-control {
     font-size: 0.85rem;
   }
 }
+
 /* Clients Section */
 .clients-section {
   padding: 100px 20px;
@@ -14244,7 +14245,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* Blog Section Styling */
 .blog-section {
   padding: 80px 20px;
   background: linear-gradient(
@@ -14252,54 +14252,57 @@ body {
     #000428,
     #004e92
   ); /* Gradient background */
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #fff; /* White text for contrast */
 }
 
-/* Blog Header Styling */
 .blog-header {
-  text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .blog-section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff; /* White title for visibility */
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }
 
 .blog-section-description {
   font-size: 1.1rem;
-  color: #e0e0e0;
-  margin-top: 12px;
+  color: #e0e0e0; /* Slightly lighter text for description */
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-/* Blog Post Cards */
 .blog-posts-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px; /* Further reduced gap between cards */
-  justify-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .blog-post-card {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Clean shadow for card */
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  max-width: 350px;
 }
 
 .blog-post-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .blog-post-image-container {
-  position: relative;
-  height: 220px;
+  width: 100%;
+  height: 200px;
   overflow: hidden;
-  border-radius: 12px 12px 0 0;
 }
 
 .blog-post-image {
@@ -14310,49 +14313,51 @@ body {
 }
 
 .blog-post-card:hover .blog-post-image {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Subtle zoom effect */
 }
 
 .blog-post-content {
   padding: 20px;
+  text-align: left;
 }
 
 .blog-post-title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
-  margin-bottom: 15px;
+  color: #000428; /* Matches the gradient theme */
+  margin-bottom: 10px;
 }
 
 .blog-post-excerpt {
   font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
+  color: #666;
+  line-height: 1.5;
   margin-bottom: 20px;
 }
 
 .blog-post-link {
-  font-size: 1.1rem;
-  color: #004e92;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #004e92; /* Matches the gradient theme */
+  color: #fff;
+  border-radius: 25px;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-post-link:hover {
-  color: #2f2f2f;
+  background-color: #002d61;
+  box-shadow: 0 5px 15px rgba(0, 78, 146, 0.5);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .blog-posts-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* Media Queries */
 
-@media (max-width: 768px) {
+/* Tablet screens and smaller */
+@media (max-width: 992px) {
   .blog-posts-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
   .blog-section-title {
@@ -14361,5 +14366,242 @@ body {
 
   .blog-section-description {
     font-size: 1rem;
+  }
+
+  .blog-post-title {
+    font-size: 1.25rem;
+  }
+
+  .blog-post-excerpt {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 576px) {
+  .blog-posts-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .blog-section {
+    padding: 60px 15px;
+  }
+
+  .blog-section-title {
+    font-size: 1.75rem;
+  }
+
+  .blog-section-description {
+    font-size: 0.9rem;
+  }
+
+  .blog-post-title {
+    font-size: 1.2rem;
+  }
+
+  .blog-post-excerpt {
+    font-size: 0.85rem;
+  }
+
+  .blog-post-link {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+}
+
+/* General Footer Styles */
+.footer-container {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+  padding: 50px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-top {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.footer-top h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-top p {
+  font-size: 1.1rem;
+  color: #bbbbbb;
+  margin-bottom: 30px;
+}
+
+.footer-top-button {
+  background-color: transparent; /* Transparent background */
+  color: #fff; /* Light blue text */
+  padding: 18px 40px;
+  border: 2px solid #ffffff; /* Light blue border */
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-top-button:hover {
+  background-color: #ffffff; /* White background on hover */
+  color: #000000; /* Black text on hover */
+  border: 2px solid #000000; /* Black border on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+.footer-top-button:active {
+  background-color: #ffffff; /* White background when clicked */
+  color: #00b0ff; /* Light blue text when clicked */
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.footer-column {
+  width: 22%;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-column ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #00b0ff; /* Light blue on hover */
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo-img {
+  width: 150px;
+  margin-right: 15px;
+}
+
+.footer-bottom p {
+  color: #bbbbbb;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-link {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #00b0ff; /* Light blue on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium to Large Devices */
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .footer-logo-img {
+    width: 130px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+/* Small Devices */
+@media (max-width: 480px) {
+  .footer-top h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-top p {
+    font-size: 1rem;
+  }
+
+  .footer-top-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+
+  .footer-column h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-column ul li {
+    font-size: 0.9rem;
+  }
+
+  .social-link {
+    font-size: 1.3rem;
+  }
+
+  .footer-logo-img {
+    width: 120px;
   }
 }
