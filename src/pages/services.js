@@ -6,7 +6,7 @@ import {
   FaChalkboardTeacher,
   FaCog,
   FaUsersCog,
-  FaArrowRight, // Import arrow icon
+  FaArrowRight,
 } from "react-icons/fa";
 
 const ServicesSection = () => {
@@ -51,7 +51,9 @@ const ServicesSection = () => {
 
   return (
     <section className="services-section">
-      <h2 className="section-title">Our Expertise</h2>
+      <h2 className="section-title">
+        <span className="highlight">Our</span> Expertise
+      </h2>
       <div className="services-container">
         {services.map((service, index) => (
           <div key={index} className="service-card">

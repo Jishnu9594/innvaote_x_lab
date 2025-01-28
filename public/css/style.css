@@ -12962,9 +12962,12 @@ textarea.form-control {
   font-weight: 700;
   color: #333;
   margin-bottom: 50px;
-  text-transform: uppercase;
   letter-spacing: 2px;
   animation: fadeInUp 1s ease-out;
+}
+
+.section-title .highlight {
+  color: #17ad1e; /* Custom color for the first word */
 }
 
 .services-container {
@@ -13157,6 +13160,9 @@ textarea.form-control {
   text-transform: uppercase;
   letter-spacing: 2px;
   animation: fadeInUp 1s ease-out;
+}
+.highlight {
+  color: #17ad1e;
 }
 
 .case-study-container {
@@ -13807,6 +13813,10 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+/* Highlight the first word */
+.highlighted-word {
+  color: #17ad1e;
+}
 
 .team-members {
   display: grid;
@@ -14106,7 +14116,7 @@ body {
     font-size: 0.85rem;
   }
 }
-
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -14161,12 +14171,18 @@ body {
 .our-story-title {
   font-size: 4rem;
   font-weight: 700;
-  text-transform: uppercase;
   color: #fff; /* White color for the title */
   font-family: "Poppins", sans-serif;
   animation: fadeIn 2s ease-out;
 }
 
+/* Highlight the first word in the title */
+.highlight-word {
+  color: #17ad1e; /* Green color for the first word */
+  font-weight: bold;
+}
+
+/* Description Text */
 .our-story-description {
   font-size: 1.2rem;
   color: #f2f2f2; /* Light gray text */
@@ -14238,6 +14254,7 @@ body {
     width: 200px;
   }
 }
+
 /* General Reset and Styling */
 * {
   margin: 0;
@@ -14325,7 +14342,7 @@ body {
 .blog-post-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #006400; /* Dark green title for a harmonious look */
+  color: black; /* Dark green title for a harmonious look */
   margin-bottom: 10px;
 }
 

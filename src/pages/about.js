@@ -24,7 +24,9 @@ const OurStorySection = () => {
 
         {/* Title and Description */}
         <div className="our-story-text-container">
-          <h2 className="our-story-title">Our Story</h2>
+          <h2 className="our-story-title">
+            <span className="highlight-word">Our</span> Story
+          </h2>
           <p className="our-story-description">
             InnovateX Labs is an ecosystem under the Jaibharth Startup Mission,
             designed to provide students with real-time exposure to projects,

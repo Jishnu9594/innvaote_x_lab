@@ -28,7 +28,9 @@ const CaseStudyPage = () => {
   return (
     <div className="case-study-section">
       <div className="case-study-header">
-        <h1 className="case-study-title">Our Projects</h1>
+        <h1 className="case-study-title">
+          <span className="highlight">Our</span> Projects
+        </h1>
       </div>
 
       <div className="case-study-container">

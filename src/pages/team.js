@@ -33,7 +33,9 @@ const TeamSection = () => {
 
   return (
     <section className="team-section">
-      <h2 className="section-title">Meet Our Team</h2>
+      <h2 className="section-title">
+        <span className="highlighted-word">Meet</span> Our Team
+      </h2>
       <div className="team-members">
         {teamMembers.map((member, index) => (
           <div className="team-card" key={index}>
