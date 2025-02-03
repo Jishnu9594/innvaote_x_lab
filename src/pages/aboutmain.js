@@ -12,6 +12,7 @@ import BlogSection from "./blog";
 import AboutHero from "../aboutsHero";
 import VideoSection from "./aboutusvideo";
 import ExpertiseSection from "./expertiseSection";
+import Footer from "./contactsection";
 
 function About() {
   return (
@@ -21,6 +22,8 @@ function About() {
         <VideoSection />
         <ExpertiseSection />
         <ServicesSection />
+        <BlogSection />
+        <Footer />
       </>
     </Fragment>
   );

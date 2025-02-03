@@ -2,20 +2,10 @@ import React, { useEffect, useState } from "react";
 
 const VideoSection = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
-
-      // Check if the stats section is in view
-      const statsSection = document.querySelector(".stats-section");
-      if (statsSection) {
-        const statsSectionTop = statsSection.getBoundingClientRect().top;
-        if (statsSectionTop < window.innerHeight * 0.8) {
-          setIsVisible(true);
-        }
-      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -32,7 +22,10 @@ const VideoSection = () => {
 
       {/* Left-aligned Text Section */}
       <div className="video-content">
-        <div className="text-section">
+        <div
+          className="text-section"
+          style={{ transform: `translateY(${scrollPosition * 0.1}px)` }}
+        >
           <h1 className="animated-text">
             Kerala's first AI ecosystem at Jaibharth College
           </h1>
@@ -47,7 +40,10 @@ const VideoSection = () => {
         </div>
 
         {/* Scrolling Stats Section */}
-        <div className={`stats-section ${isVisible ? "visible" : ""}`}>
+        <div
+          className="stats-section"
+          style={{ transform: `translateY(${scrollPosition * 0.1}px)` }}
+        >
           <div className="stat">
             <h2>600+</h2>
             <p>International Clients</p>
