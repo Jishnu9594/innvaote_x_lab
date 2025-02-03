@@ -14645,3 +14645,403 @@ body {
     align-items: center;
   }
 }
+
+/* General styles */
+.hero-section {
+  background-color: #ffffff; /* Clean white background */
+  padding: 100px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Left Content */
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222; /* Default dark color */
+  transition: color 0.5s ease-in-out;
+}
+
+/* Text color change on scroll */
+.white-text {
+  color: #222; /* Default dark color */
+}
+
+.blue-text {
+  color: #007bff; /* Modern blue shade */
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* Right Image */
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+}
+/* Video Section */
+.video-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  text-align: left;
+}
+
+/* Background Video */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Video Content */
+.video-content {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  margin-left: 10%;
+}
+
+/* Animated Text */
+.animated-text {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  background-image: linear-gradient(
+    90deg,
+    #ff5733,
+    #ffc300,
+    #33ff57,
+    #3357ff,
+    #ff33a8
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorChange 5s linear infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Text Section */
+.text-section {
+  max-width: 600px;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Stats Section */
+.stats-section {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.stats-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h2 {
+  font-size: 2.5rem;
+}
+
+.stat p {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .video-content {
+    margin-left: 5%;
+  }
+
+  .animated-text {
+    font-size: 3rem;
+  }
+
+  .text-section p {
+    font-size: 1rem;
+  }
+
+  .stats-section {
+    gap: 20px;
+  }
+
+  .stat h2 {
+    font-size: 2rem;
+  }
+
+  .stat p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-content {
+    margin-left: 20px;
+  }
+
+  .animated-text {
+    font-size: 2.5rem;
+  }
+
+  .text-section p {
+    font-size: 0.9rem;
+  }
+
+  .stats-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stat h2 {
+    font-size: 2rem;
+  }
+
+  .stat p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-text {
+    font-size: 2rem;
+  }
+
+  .text-section p {
+    font-size: 0.8rem;
+  }
+
+  .stat h2 {
+    font-size: 1.5rem;
+  }
+
+  .stat p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Main Section with Black Background */
+.expertise-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Content Centering */
+.expertise-content {
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Animated Gradient Headings */
+.expertise-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Gradient Text Animation */
+.expertise-word {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff00ff, #00c8ff, #4ade80, #facc15);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 3s infinite alternate;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Animation for Gradient */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Description */
+.expertise-description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #ccc;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+/* Transparent Square Button */
+.arw-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0px; /* Square Shape */
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+  background: transparent;
+}
+
+.arw-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .expertise-title {
+    font-size: 2.8rem;
+  }
+
+  .expertise-description {
+    font-size: 1.1rem;
+  }
+
+  .arw-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .expertise-section {
+    padding: 80px 20px;
+  }
+
+  .expertise-title {
+    font-size: 2.2rem;
+  }
+
+  .expertise-description {
+    font-size: 1rem;
+  }
+
+  .arw-btn {
+    font-size: 0.85rem;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expertise-title {
+    font-size: 1.8rem;
+  }
+
+  .expertise-description {
+    font-size: 0.9rem;
+  }
+
+  .arw-btn {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
