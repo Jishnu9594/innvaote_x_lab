@@ -15394,7 +15394,6 @@ body {
   }
 }
 
-
 /* Tech Stack Section */
 .tech-stack-section-wrapper {
   background-color: #f0f4f8; /* Light background for contrast */
@@ -15412,7 +15411,7 @@ body {
   font-size: 48px;
   font-weight: 600;
   margin-bottom: 20px;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .tech-stack-heading-text span {
@@ -15422,7 +15421,7 @@ body {
 .tech-stack-description-text {
   font-size: 18px;
   margin-bottom: 30px;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   color: #555;
 }
 
@@ -15537,4 +15536,203 @@ body {
     font-size: 35px;
   }
 }
- 
+
+/* Career Hero Section Styles */
+.career-hero-container {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #ff6a00,
+    #ee0979
+  ); /* Modern gradient from orange to pink */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.career-hero-overlay {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Dark overlay for better text visibility */
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.career-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: 2px;
+}
+
+.career-hero-description {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.career-hero-button {
+  padding: 15px 25px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: 2px solid white; /* Transparent button border with white color */
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover */
+  position: relative;
+  margin-top: 20px;
+  transform: scale(1); /* Initial state */
+}
+
+.career-hero-button:hover {
+  background-color: white;
+  color: #ff6a00;
+  border-color: #ff6a00;
+  transform: scale(1.05); /* Slightly scale up the button on hover */
+}
+
+.career-hero-button:active {
+  transform: scale(1); /* Reset the scaling effect when clicked */
+}
+
+.arrow-icon {
+  margin-left: 10px; /* Adds space between text and arrow */
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .career-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .career-hero-description {
+    font-size: 1.1rem;
+  }
+
+  .career-hero-button {
+    padding: 12px 20px;
+  }
+}
+
+/* General Career Section */
+.career-section {
+  background: #ffffff; /* White background */
+  color: #333333;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Section Headings */
+.career-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  color: #222222;
+}
+
+.career-subheading {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #666666;
+  margin-bottom: 40px;
+}
+
+/* Job Listings Grid */
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Job Card */
+.career-card {
+  background: #f9f9f9; /* Light gray for a modern look */
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid #e0e0e0;
+}
+
+.career-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Job Title */
+.job-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222222;
+}
+
+/* Job Details */
+.job-location,
+.job-date,
+.job-deadline {
+  font-size: 1rem;
+  color: #555555;
+  margin: 5px 0;
+}
+
+.job-description {
+  font-size: 1rem;
+  color: #333333;
+  margin: 10px 0;
+}
+
+/* Apply Button with Hover Animation */
+.apply-btn {
+  background: transparent;
+  color: #333333;
+  border: 2px solid #333333;
+  font-size: 1rem;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.apply-btn:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+.apply-btn .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.apply-btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .career-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
