@@ -15045,3 +15045,496 @@ body {
     padding: 8px 16px;
   }
 }
+
+/* Main hero section */
+.service-hero-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 5%;
+  background: linear-gradient(
+    120deg,
+    #ff6a00,
+    #ee0979
+  ); /* New gradient: orange to pink */
+  color: white;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-intro {
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero-heading-text {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.hero-description-text {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/* Scroll arrow */
+.arrow-scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Service cards section */
+.service-cards-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.single-service-card {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.single-service-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.single-service-card p {
+  font-size: 16px;
+}
+
+.single-service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Service icon styles */
+.service-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+  color: #ff6a00; /* Icon color */
+}
+
+/* Responsive design for all devices */
+
+/* For large desktops */
+@media (min-width: 1200px) {
+  .service-hero-wrapper {
+    flex-direction: row;
+    padding: 120px 10%;
+  }
+
+  .hero-heading-text {
+    font-size: 60px;
+  }
+
+  .hero-description-text {
+    font-size: 24px;
+  }
+
+  .service-cards-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .single-service-card {
+    width: 30%;
+  }
+}
+
+/* For laptops/tablets */
+@media (max-width: 1024px) {
+  .service-hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .service-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .single-service-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .hero-heading-text {
+    font-size: 50px;
+  }
+
+  .hero-description-text {
+    font-size: 20px;
+  }
+}
+
+/* For smaller tablets */
+@media (max-width: 768px) {
+  .hero-heading-text {
+    font-size: 40px;
+  }
+
+  .hero-description-text {
+    font-size: 18px;
+  }
+
+  .arrow-scroll-indicator {
+    font-size: 25px;
+  }
+
+  .service-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .single-service-card {
+    width: 90%;
+  }
+}
+
+/* For phones */
+@media (max-width: 480px) {
+  .hero-heading-text {
+    font-size: 30px;
+  }
+
+  .hero-description-text {
+    font-size: 14px;
+  }
+
+  .arrow-scroll-indicator {
+    font-size: 20px;
+  }
+
+  .single-service-card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .service-icon {
+    font-size: 40px;
+  }
+}
+
+/* Industries Section */
+.industries-section-wrapper {
+  background-color: #17ad1e; /* Updated background color */
+  color: white;
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.industries-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.industries-heading-text {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.industries-description-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/* Industries Cards */
+.industries-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 10%;
+}
+
+.single-industry-card {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 22%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.single-industry-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.single-industry-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Icons */
+.industry-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #3a7bd5; /* Icon color */
+}
+
+/* Hover effects */
+.single-industry-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for all devices */
+
+/* For large desktops */
+@media (min-width: 1200px) {
+  .industries-cards-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .single-industry-card {
+    width: 22%;
+  }
+}
+
+/* For laptops/tablets */
+@media (max-width: 1024px) {
+  .industries-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .single-industry-card {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .industries-heading-text {
+    font-size: 45px;
+  }
+
+  .industries-description-text {
+    font-size: 18px;
+  }
+}
+
+/* For smaller tablets */
+@media (max-width: 768px) {
+  .industries-heading-text {
+    font-size: 40px;
+  }
+
+  .industries-description-text {
+    font-size: 16px;
+  }
+
+  .single-industry-card {
+    width: 90%;
+  }
+
+  .industry-icon {
+    font-size: 40px;
+  }
+}
+
+/* For phones */
+@media (max-width: 480px) {
+  .industries-heading-text {
+    font-size: 30px;
+  }
+
+  .industries-description-text {
+    font-size: 14px;
+  }
+
+  .single-industry-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .industry-icon {
+    font-size: 35px;
+  }
+}
+
+
+/* Tech Stack Section */
+.tech-stack-section-wrapper {
+  background-color: #f0f4f8; /* Light background for contrast */
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.tech-stack-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.tech-stack-heading-text {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.tech-stack-heading-text span {
+  color: #17ad1e; /* Green color for the span text */
+}
+
+.tech-stack-description-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #555;
+}
+
+/* Tech Stack Icons */
+.tech-stack-icons-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 30px;
+  justify-items: center; /* Center the cards horizontally */
+}
+
+.tech-stack-icon-card {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.tech-stack-icon-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.tech-stack-icon-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #777;
+}
+
+/* Icons */
+.tech-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #17ad1e; /* Green color for icons */
+}
+
+/* Hover effects */
+.tech-stack-icon-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for all devices */
+
+/* For large desktops */
+@media (min-width: 1200px) {
+  .tech-stack-icons-container {
+    grid-template-columns: repeat(3, 1fr); /* Ensure 3 cards per row */
+  }
+}
+
+/* For laptops/tablets */
+@media (max-width: 1024px) {
+  .tech-stack-icons-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+
+  .tech-stack-icon-card {
+    width: 100%; /* Ensure full width for smaller cards */
+  }
+
+  .tech-stack-heading-text {
+    font-size: 45px;
+  }
+
+  .tech-stack-description-text {
+    font-size: 18px;
+  }
+}
+
+/* For smaller tablets */
+@media (max-width: 768px) {
+  .tech-stack-heading-text {
+    font-size: 40px;
+  }
+
+  .tech-stack-description-text {
+    font-size: 16px;
+  }
+
+  .tech-stack-icon-card {
+    width: 100%;
+  }
+
+  .tech-icon {
+    font-size: 40px;
+  }
+}
+
+/* For phones */
+@media (max-width: 480px) {
+  .tech-stack-heading-text {
+    font-size: 30px;
+  }
+
+  .tech-stack-description-text {
+    font-size: 14px;
+  }
+
+  .tech-stack-icon-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .tech-icon {
+    font-size: 35px;
+  }
+}
+ 
