@@ -15736,3 +15736,249 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
+
+/* Background */
+body {
+  background: linear-gradient(120deg, #f0f2f5, #e0e5eb);
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Main Container */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 5%;
+  flex-wrap: wrap;
+}
+
+/* Left Section */
+.contact-left {
+  width: 45%;
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.subtext {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Right Section */
+.contact-right {
+  width: 50%;
+  min-width: 300px; /* Ensures the right section doesn't get too narrow */
+}
+
+.contact-right h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 5px;
+  color: #333;
+}
+
+.contact-right textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Checkbox Label (Left side of the paragraph) */
+.contact-right .checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-right input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+/* Transparent Button (Download with animation) */
+.btn-transparent {
+  background: transparent;
+  color: #333;
+  padding: 14px 22px;
+  border: 2px solid #333;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover Effect for Button */
+.btn-transparent:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-4px); /* Lift effect on hover */
+}
+
+.btn-transparent:active {
+  transform: translateY(0); /* Return to normal on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .contact-right h2 {
+    font-size: 20px;
+  }
+}
+
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Main Container */
+.location-container {
+  padding: 60px 10%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.location-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.location-heading h2 {
+  font-size: 36px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.location-heading p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Location Details */
+.location-details h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.address {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Contact Information - Card Style */
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-item i {
+  font-size: 24px;
+  color: #003366;
+}
+
+.contact-item p,
+.contact-item a {
+  font-size: 16px;
+  color: #555;
+}
+
+.contact-item a {
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .location-container {
+    padding: 30px 5%;
+  }
+
+  .location-heading h2 {
+    font-size: 28px;
+  }
+
+  .location-details h3 {
+    font-size: 24px;
+  }
+
+  .address {
+    font-size: 14px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-item {
+    padding: 15px;
+  }
+}

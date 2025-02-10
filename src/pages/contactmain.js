@@ -14,20 +14,21 @@ import TechStackSection from "./TechStackSection";
 import CareerHeroSection from "./CareerHeroSection";
 import CareerSection from "./jobposition";
 import BlogSection from "./blog";
+import Contact from "./contactpage";
+import Location from "./location";
 
-function Career() {
+function ContactMain() {
   return (
     <Fragment>
       <>
         <Navbar />
-        <CareerHeroSection />
-        <CareerSection />
-        <TeamSection />
-        <BlogSection />
+        <Contact />
+        <Location />
+
         <Footer />
       </>
     </Fragment>
   );
 }
 
-export default Career;
+export default ContactMain;

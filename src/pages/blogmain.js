@@ -15,19 +15,19 @@ import CareerHeroSection from "./CareerHeroSection";
 import CareerSection from "./jobposition";
 import BlogSection from "./blog";
 
-function Career() {
+function BlogMain() {
   return (
     <Fragment>
       <>
         <Navbar />
-        <CareerHeroSection />
-        <CareerSection />
-        <TeamSection />
         <BlogSection />
+        <TeamSection />
+        <ClientsSection />
+
         <Footer />
       </>
     </Fragment>
   );
 }
 
-export default Career;
+export default BlogMain;

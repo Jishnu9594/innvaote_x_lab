@@ -3,6 +3,8 @@ import Index from "./pages/index";
 import About from "./pages/aboutmain";
 import Services from "./pages/servicesmain";
 import Career from "./pages/carreermain";
+import BlogMain from "./pages/blogmain";
+import ContactMain from "./pages/contactmain";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/careers" element={<Career />} />
+          <Route path="/blog" element={<BlogMain />} />
+          <Route path="/contact" element={<ContactMain />} />
         </Routes>
       </Router>
     </div>
