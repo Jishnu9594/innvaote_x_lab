@@ -14,12 +14,6 @@ const VideoSection = () => {
 
   return (
     <section className="video-section">
-      {/* Background Video */}
-      <video autoPlay muted loop className="video-background">
-        <source src="images/ai2.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
       {/* Left-aligned Text Section */}
       <div className="video-content">
         <div
