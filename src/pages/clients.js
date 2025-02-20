@@ -1,16 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ClientsSection = () => {
-  const clientLogos = [
-    "images/1.svg",
-    "images/2.svg",
-    "images/3.svg",
-    "images/4.svg",
-    "images/5.svg",
-    "images/6.svg",
-    "images/7.svg",
-    "images/8.svg",
-  ];
+  const [clients, setClients] = useState([]);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/innovatex/clients/") // Adjust API URL if necessary
+      .then((response) => response.json())
+      .then((data) => setClients(data))
+      .catch((error) => console.error("Error fetching clients:", error));
+  }, []);
 
   return (
     <section className="clients-section">
@@ -22,12 +20,12 @@ const ClientsSection = () => {
       </div>
 
       <div className="clients-logo-list">
-        {clientLogos.map((logo, index) => (
+        {clients.map((client, index) => (
           <div key={index} className="client-logo-container">
             <img
               className="client-logo"
-              src={logo}
-              alt={`Client ${index + 1}`}
+              src={client.client_logo}
+              alt={client.client_name}
             />
           </div>
         ))}

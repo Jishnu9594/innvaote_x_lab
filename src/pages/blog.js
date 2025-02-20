@@ -1,29 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const BlogSection = () => {
-  const blogPosts = [
-    {
-      title: "Transforming the Future of Software with AI",
-      excerpt:
-        "AI is revolutionizing software development, making applications smarter and more efficient. Here's how.",
-      image: "images/innoavatex4.jpg",
-      link: "#",
-    },
-    {
-      title: "The Importance of Cybersecurity in Modern Applications",
-      excerpt:
-        "In today's digital world, cybersecurity is more important than ever. Learn how to secure your software applications.",
-      image: "images/innovatex1.jpg",
-      link: "#",
-    },
-    {
-      title: "Mastering Cloud Computing for Scalable Solutions",
-      excerpt:
-        "Cloud computing is the backbone of scalable software solutions. Explore how it's changing the game for developers.",
-      image: "images/innovatex2.jpg",
-      link: "#",
-    },
-  ];
+  const [blogPosts, setBlogPosts] = useState([]);
+  const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8000/innovatex/blogs/") // Update with your actual API endpoint
+      .then((response) => {
+        setBlogPosts(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching blog posts:", error);
+      });
+  }, []);
+
+  // Show only the latest 6 blogs initially
+  const visiblePosts = showAll ? blogPosts : blogPosts.slice(0, 6);
 
   return (
     <div className="blog-section">
@@ -36,17 +30,20 @@ const BlogSection = () => {
       </div>
 
       <div className="blog-posts-container">
-        {blogPosts.map((post, index) => (
+        {visiblePosts.map((post, index) => (
           <div key={index} className="blog-post-card">
             <div className="blog-post-image-container">
               <img
-                src={post.image}
-                alt={post.title}
+                src={post.image} // Assuming Django API returns the full image URL
+                alt={post.blog_title}
                 className="blog-post-image"
+                onError={(e) => {
+                  e.target.src = "/placeholder.jpg";
+                }} // Fallback image if error occurs
               />
             </div>
             <div className="blog-post-content">
-              <h3 className="blog-post-title">{post.title}</h3>
+              <h3 className="blog-post-title">{post.blog_title}</h3>
               <p className="blog-post-excerpt">{post.excerpt}</p>
               <a href={post.link} className="blog-post-link">
                 Read More
@@ -55,6 +52,15 @@ const BlogSection = () => {
           </div>
         ))}
       </div>
+
+      {/* Show "View All Blogs" button only if there are more than 6 posts */}
+      {blogPosts.length > 6 && !showAll && (
+        <div className="blog-view-all">
+          <button className="view-all-button" onClick={() => setShowAll(true)}>
+            View All Blogs
+          </button>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,48 +1,61 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const TestimonialSection = () => {
-  const testimonials = [
-    {
-      name: "John Doe",
-      company: "Tech Innovators",
-      feedback:
-        "Innovatex Labs revolutionized our operations with cutting-edge software solutions. We couldn’t have asked for a better partner.",
-      image: "images/testimony-4.jpg", // Replace with actual image
-    },
-    {
-      name: "Jane Smith",
-      company: "Creative Solutions",
-      feedback:
-        "The team at Innovatex Labs is highly skilled and responsive. They turned our vision into reality, and the results speak for themselves.",
-      image: "images/testimony-4.jpg", // Replace with actual image
-    },
-    {
-      name: "Sam Johnson",
-      company: "Business Pros",
-      feedback:
-        "Their innovative approach to software development has helped us scale faster than ever. We look forward to working with them again.",
-      image: "images/testimony-4.jpg", // Replace with actual image
-    },
-  ];
+  const [testimonials, setTestimonials] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    // Fetch testimonials from backend
+    axios
+      .get("http://127.0.0.1:8000/innovatex/testimonials/")
+      .then((response) => {
+        setTestimonials(response.data);
+      })
+      .catch((error) => console.error("Error fetching testimonials:", error));
+  }, []);
+
+  useEffect(() => {
+    if (testimonials.length === 0) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [testimonials]);
 
   return (
     <div className="testimonial-section-software">
       <h2 className="testimonial-title">What Our Clients Say</h2>
-      <div className="testimonial-cards-container">
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className="testimonial-card">
-            <img
-              className="testimonial-image"
-              src={testimonial.image}
-              alt={testimonial.name}
-            />
-            <div className="testimonial-text">
-              <p className="testimonial-feedback">"{testimonial.feedback}"</p>
-              <p className="testimonial-name">- {testimonial.name}</p>
-              <p className="testimonial-company">{testimonial.company}</p>
+      <div className="testimonial-cards-wrapper">
+        <div
+          className="testimonial-cards-container"
+          style={{
+            transform: `translateX(${-currentSlide * 100}%)`,
+            transition: "transform 0.5s ease",
+          }}
+        >
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="testimonial-card">
+              {testimonial.image ? (
+                <img
+                  className="testimonial-image"
+                  src={testimonial.image} // Use image URL directly
+                  alt={testimonial.name}
+                  onError={(e) => (e.target.style.display = "none")} // Hide broken images
+                />
+              ) : (
+                <div className="no-image-placeholder">No Image Available</div>
+              )}
+              <div className="testimonial-text">
+                <p className="testimonial-feedback">"{testimonial.feedback}"</p>
+                <p className="testimonial-name">- {testimonial.name}</p>
+                <p className="testimonial-company">{testimonial.company}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

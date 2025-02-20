@@ -1,29 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const CaseStudyPage = () => {
-  const caseStudies = [
-    {
-      title: "Project One",
-      description:
-        "A brief description of the project and the impact it created.",
-      image: "images/pettrust.png",
-      link: "#",
-    },
-    {
-      title: "Project Two",
-      description:
-        "A brief description of the project and the impact it created.",
-      image: "images/pettrust.png",
-      link: "#",
-    },
-    {
-      title: "Project Three",
-      description:
-        "A brief description of the project and the impact it created.",
-      image: "images/pettrust.png",
-      link: "#",
-    },
-  ];
+  const [caseStudies, setCaseStudies] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8000/innovatex/case-studies/list/")
+      .then((response) => {
+        setCaseStudies(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching case studies:", error);
+        setCaseStudies([
+          {
+            project_title: "Error",
+            project_description: "Unable to fetch case studies.",
+          },
+        ]);
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <div className="case-study-section">
@@ -34,22 +33,28 @@ const CaseStudyPage = () => {
       </div>
 
       <div className="case-study-container">
-        {caseStudies.map((study, index) => (
-          <div key={index} className="case-study-card">
-            <img
-              className="case-study-image"
-              src={study.image}
-              alt={study.title}
-            />
-            <div className="case-study-info">
-              <h3 className="case-study-card-title">{study.title}</h3>
-              <p className="case-study-card-description">{study.description}</p>
-              <a className="case-study-card-button" href={study.link}>
-                Learn More
-              </a>
+        {loading ? (
+          <p>Loading case studies...</p>
+        ) : (
+          caseStudies.map((study, index) => (
+            <div key={index} className="case-study-card">
+              <img
+                className="case-study-image"
+                src={study.project_image}
+                alt={study.project_title}
+              />
+              <div className="case-study-info">
+                <h3 className="case-study-card-title">{study.project_title}</h3>
+                <p className="case-study-card-description">
+                  {study.project_description}
+                </p>
+                <a className="case-study-card-button" href={study.project_link}>
+                  Learn More
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
 
       {/* View All Projects Button */}
