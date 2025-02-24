@@ -17,6 +17,14 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector(".nav-toggle");
+    const menu = document.querySelector(".nav-menu");
+
+    toggleButton.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  });
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
