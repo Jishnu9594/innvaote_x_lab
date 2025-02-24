@@ -9,15 +9,14 @@ import TeamSection from "./team";
 import TestimonialSection from "./testimonals";
 import OurStorySection from "./about";
 import BlogSection from "./blog";
+import VideoSection from "./aboutusvideo";
 
 function Index() {
   return (
     <Fragment>
       <>
-        <HeroSection />
         <Navbar />
-        <OurStorySection />
-
+        <VideoSection />
         <ServicesSection />
         <ClientsSection />
         <CaseStudyPage />

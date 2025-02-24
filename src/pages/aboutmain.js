@@ -19,7 +19,7 @@ function About() {
     <Fragment>
       <>
         <Navbar />
-        <VideoSection />
+        <HeroSection />
         <ExpertiseSection />
         <ServicesSection />
         <BlogSection />
