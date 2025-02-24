@@ -15956,7 +15956,6 @@ body {
   z-index: 1000;
   transition: all 0.3s ease-in-out;
   height: 90px;
-  border-radius: 10px;
 }
 
 /* Navbar Scroll Effect */
