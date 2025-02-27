@@ -15941,14 +15941,13 @@ body {
 /* Import Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
-/* Navbar Styling */
-.navbar {
+/* Base Navbar Styling */
+.custom-navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: transparent;
-  backdrop-filter: blur(10px);
   padding: 15px 5%;
   display: flex;
   align-items: center;
@@ -15958,35 +15957,45 @@ body {
   height: 90px;
 }
 
-/* Navbar Scroll Effect */
-.navbar.scrolled {
-  background: rgba(255, 255, 255, 0.9);
+/* Navbar Background on Scroll (Desktop: White) */
+.custom-navbar.scrolled-desktop {
+  background: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar.scrolled .nav-link {
-  color: black;
+/* Navbar Background on Scroll (Mobile: Black) */
+.custom-navbar.scrolled-mobile {
+  background: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Navbar Container */
-.nav-container {
+/* Navigation Container */
+.custom-nav-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Logo - Align Left */
-.nav-logo {
-  font-size: 24px;
-  font-weight: 600;
-  color: #17ad1e;
+/* Logo */
+.custom-nav-logo {
   text-decoration: none;
-  flex: 0;
+}
+
+.custom-logo-img {
+  height: 100px;
+  width: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Shrink logo on scroll */
+.custom-navbar.scrolled-desktop .custom-logo-img,
+.custom-navbar.scrolled-mobile .custom-logo-img {
+  height: 40px;
 }
 
 /* Navigation Menu */
-.nav-menu {
+.custom-nav-menu {
   display: flex;
   list-style: none;
   gap: 20px;
@@ -15995,19 +16004,23 @@ body {
 }
 
 /* Navigation Links */
-.nav-link {
+.custom-nav-link {
   font-size: 16px;
   color: white;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
-.nav-link:hover {
-  color: #fff;
+.custom-navbar.scrolled-desktop .custom-nav-link {
+  color: black;
+}
+
+.custom-nav-link:hover {
+  color: #17ad1e;
 }
 
 /* Get Started Button */
-.nav-button {
+.custom-nav-button {
   background: #17ad1e;
   color: white;
   padding: 8px 16px;
@@ -16016,89 +16029,74 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.nav-button:hover {
+.custom-navbar.scrolled-desktop .custom-nav-button {
+  background: black;
+  color: white;
+}
+
+.custom-nav-button:hover {
   background: white;
   color: #17ad1e;
 }
 
 /* Hamburger Menu Icon */
-.nav-toggle {
+.custom-nav-toggle {
   display: none;
   font-size: 24px;
-  color: black;
+  color: white;
   cursor: pointer;
   z-index: 1100;
 }
 
 /* Mobile Styles */
 @media (max-width: 1024px) {
-  .nav-toggle {
+  .custom-nav-toggle {
     display: block;
   }
 
-  /* Full-screen Navbar with Modern Gradient */
-  .nav-menu {
+  /* Full-screen Navbar */
+  .custom-nav-menu {
     position: fixed;
     top: 0;
-    right: -100%; /* Initially hidden */
-    width: 100vw; /* Full screen width */
-    height: 100vh; /* Full screen height */
-    background: linear-gradient(
-      135deg,
-      #17ad1e,
-      #0e8a16
-    ); /* Modern Green Gradient */
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    background: black;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 25px;
     padding: 40px;
-    transition: right 0.4s ease-in-out; /* Smooth slide effect */
+    transition: right 0.4s ease-in-out;
   }
 
-  .nav-menu.active {
-    right: 0; /* Slide in */
+  .custom-nav-menu.active {
+    right: 0;
   }
 
   /* Navbar Background for Mobile */
-  .navbar {
+  .custom-navbar {
     background: black;
   }
 
-  .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.9);
-  }
-
   /* Centered Navigation Links */
-  .nav-item {
+  .custom-nav-item {
     width: 100%;
     text-align: center;
   }
 
-  .nav-link {
+  .custom-nav-link {
     font-size: 24px;
     color: white;
     padding: 15px;
     display: block;
   }
 
-  .nav-button {
+  .custom-nav-button {
     display: inline-block;
     width: 70%;
     text-align: center;
     font-size: 20px;
     padding: 14px;
   }
-}
-
-/* Logo Styling */
-.logo-img {
-  height: 100px;
-  width: auto;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Shrink logo on scroll */
-.navbar.scrolled .logo-img {
-  height: 40px;
 }

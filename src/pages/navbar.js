@@ -1,78 +1,91 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+const CustomNavbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setMenuOpen(!menuOpen);
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.querySelector(".nav-toggle");
-    const menu = document.querySelector(".nav-menu");
+    window.addEventListener("resize", handleResize);
 
-    toggleButton.addEventListener("click", function () {
-      menu.classList.toggle("active");
-    });
-  });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <div className="nav-container">
-        <a href="/" className="nav-logo">
-          <img src="images/innovatexlogo.png" alt="Logo" className="logo-img" />
+    <nav
+      className={`custom-navbar ${
+        isScrolled ? (isMobile ? "scrolled-mobile" : "scrolled-desktop") : ""
+      }`}
+    >
+      <div className="custom-nav-container">
+        {/* Logo */}
+        <a href="/" className="custom-nav-logo">
+          <img
+            src="images/innovatexlogo.png"
+            alt="Logo"
+            className="custom-logo-img"
+          />
         </a>
 
-        <div className="nav-toggle" onClick={toggleMenu}>
-          {isOpen ? <FaTimes /> : <FaBars />}
+        {/* Mobile Menu Toggle */}
+        <div className="custom-nav-toggle" onClick={toggleMenu}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
 
+        {/* Navigation Menu */}
         <ul
-          className={`nav-menu ${isOpen ? "active" : ""}`}
+          className={`custom-nav-menu ${menuOpen ? "active" : ""}`}
           onClick={toggleMenu}
         >
-          <li className="nav-item">
-            <a href="/" className="nav-link">
+          <li className="custom-nav-item">
+            <a href="/" className="custom-nav-link">
               Home
             </a>
           </li>
-          <li className="nav-item">
-            <a href="/about" className="nav-link">
+          <li className="custom-nav-item">
+            <a href="/about" className="custom-nav-link">
               About
             </a>
           </li>
-          <li className="nav-item">
-            <a href="/services" className="nav-link">
+          <li className="custom-nav-item">
+            <a href="/services" className="custom-nav-link">
               Services
             </a>
           </li>
-          <li className="nav-item">
-            <a href="/blog" className="nav-link">
+          <li className="custom-nav-item">
+            <a href="/blog" className="custom-nav-link">
               Blog
             </a>
           </li>
-          <li className="nav-item">
-            <a href="/careers" className="nav-link">
+          <li className="custom-nav-item">
+            <a href="/careers" className="custom-nav-link">
               Careers
             </a>
           </li>
-          <li className="nav-item">
-            <a href="/contact" className="nav-link">
+          <li className="custom-nav-item">
+            <a href="/contact" className="custom-nav-link">
               Contact
             </a>
           </li>
-          <li className="nav-item">
-            <a href="/login" className="nav-button">
+          <li className="custom-nav-item">
+            <a href="/login" className="custom-nav-button">
               Get Started
             </a>
           </li>
@@ -82,4 +95,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default CustomNavbar;
