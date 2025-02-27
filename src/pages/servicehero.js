@@ -3,19 +3,19 @@ import { FaArrowDown } from "react-icons/fa";
 
 const ServiceHero = () => {
   return (
-    <section className="service-hero-wrapper">
-      <div className="hero-intro">
-        <h1 className="hero-heading-text">
-          Innovating the Future with{" "}
-          <span className="highlight">Cutting-Edge Solutions</span>
+    <section className="hero-section">
+      <div className="hero-content">
+        <h1 className="hero-title">
+          <span className="white-text">Innovating the Future with</span>{" "}
+          <span className="green-highlight">Cutting-Edge Solutions</span>
         </h1>
-        <p className="hero-description-text">
-          At Innovatex Labs, we deliver top-tier digital services that empower
+        <p className="hero-description">
+          At Innovatex Lab, we deliver top-tier digital services that empower
           businesses to succeed in the ever-evolving technological landscape.
         </p>
       </div>
 
-      <div className="arrow-scroll-indicator">
+      <div className="scroll-arrow">
         <FaArrowDown />
       </div>
     </section>

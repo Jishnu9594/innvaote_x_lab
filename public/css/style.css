@@ -14255,7 +14255,7 @@ body {
   }
 }
 
-/* General Reset and Styling */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -14263,63 +14263,63 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* Blog Section */
 .blog-section {
-  padding: 80px 20px;
-  background: linear-gradient(
-    145deg,
-    #006400,
-    #2e8b57
-  ); /* Dark Green Gradient */
-  font-family: "Roboto", sans-serif;
+  padding: 80px 5%;
+  background: linear-gradient(145deg, #006400, #2e8b57);
   text-align: center;
-  color: #fff; /* White text for contrast */
+  color: #fff;
 }
 
+/* Header */
 .blog-header {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .blog-section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #fff; /* White title for visibility */
-  margin-bottom: 20px;
+  color: #fff;
+  margin-bottom: 15px;
   text-transform: capitalize;
   letter-spacing: 1px;
 }
 
 .blog-section-description {
   font-size: 1.1rem;
-  color: #e0e0e0; /* Slightly lighter text for description */
+  color: #e0e0e0;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
+/* Blog Post Grid */
 .blog-posts-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Blog Post Card */
 .blog-post-card {
   background-color: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Clean shadow for card */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-post-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* Blog Post Image */
 .blog-post-image-container {
   width: 100%;
-  height: 200px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -14331,18 +14331,19 @@ body {
 }
 
 .blog-post-card:hover .blog-post-image {
-  transform: scale(1.05); /* Subtle zoom effect */
+  transform: scale(1.05);
 }
 
+/* Blog Post Content */
 .blog-post-content {
   padding: 20px;
   text-align: left;
 }
 
 .blog-post-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  color: black; /* Dark green title for a harmonious look */
+  color: black;
   margin-bottom: 10px;
 }
 
@@ -14350,15 +14351,16 @@ body {
   font-size: 1rem;
   color: #666;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
+/* Read More Link */
 .blog-post-link {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #2e8b57; /* Matches the gradient theme */
+  background-color: #2e8b57;
   color: #fff;
-  border-radius: 25px;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -14369,6 +14371,7 @@ body {
   box-shadow: 0 5px 15px rgba(0, 78, 146, 0.5);
 }
 
+/* View All Button */
 .blog-view-all {
   margin-top: 30px;
 }
@@ -14377,10 +14380,10 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 10px 25px;
-  background: transparent; /* Transparent background */
-  border: 2px solid #fff; /* White border */
-  color: #fff; /* White text */
-  border-radius: 5px; /* Square box */
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 5px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -14388,28 +14391,13 @@ body {
 }
 
 .view-all-button:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Slightly opaque white */
-  color: #fff; /* White text */
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.view-all-button::after {
-  content: "→"; /* Arrow mark */
-  margin-left: 10px;
-  font-size: 1.2rem;
-  transition: margin-left 0.3s ease;
-}
-
-.view-all-button:hover::after {
-  margin-left: 15px; /* Move arrow on hover */
-}
-
-/* Media Queries */
-
-/* Tablet screens and smaller */
+/* Responsive Design */
 @media (max-width: 992px) {
   .blog-posts-container {
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
   }
 
   .blog-section-title {
@@ -14429,19 +14417,39 @@ body {
   }
 }
 
-/* Mobile screens */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .blog-posts-container {
     grid-template-columns: 1fr;
-    gap: 15px;
   }
 
   .blog-section {
-    padding: 60px 15px;
+    padding: 60px 10%;
   }
 
   .blog-section-title {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
+  }
+
+  .blog-section-description {
+    font-size: 1rem;
+  }
+
+  .blog-post-title {
+    font-size: 1.2rem;
+  }
+
+  .blog-post-excerpt {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-section {
+    padding: 50px 8%;
+  }
+
+  .blog-section-title {
+    font-size: 1.6rem;
   }
 
   .blog-section-description {
@@ -14449,7 +14457,7 @@ body {
   }
 
   .blog-post-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .blog-post-excerpt {
@@ -15106,9 +15114,8 @@ body {
 }
 /* Import Poppins font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
-
 /* Main hero section */
-.service-hero-wrapper {
+.hero-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15124,28 +15131,33 @@ body {
 }
 
 /* Intro Text */
-.hero-intro {
+.hero-content {
   max-width: 600px;
 }
 
-.hero-heading-text {
+.hero-title {
   font-size: 50px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.hero-heading-text .highlight {
+.hero-title .white-text {
+  color: white;
+}
+
+.hero-title .green-highlight {
   color: #17ad1e;
 }
 
-.hero-description-text {
+.hero-description {
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 30px;
+  color: #f0f0f0;
 }
 
 /* Scroll Arrow */
-.arrow-scroll-indicator {
+.scroll-arrow {
   position: absolute;
   bottom: 30px;
   left: 50%;
@@ -15167,34 +15179,34 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  .hero-heading-text {
+  .hero-title {
     font-size: 40px;
   }
-  .hero-description-text {
+  .hero-description {
     font-size: 18px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-heading-text {
+  .hero-title {
     font-size: 35px;
   }
-  .hero-description-text {
+  .hero-description {
     font-size: 16px;
   }
-  .arrow-scroll-indicator {
+  .scroll-arrow {
     font-size: 25px;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-heading-text {
+  .hero-title {
     font-size: 28px;
   }
-  .hero-description-text {
+  .hero-description {
     font-size: 14px;
   }
-  .arrow-scroll-indicator {
+  .scroll-arrow {
     font-size: 20px;
   }
 }
@@ -15218,6 +15230,7 @@ body {
   font-weight: 600;
   margin-bottom: 20px;
   font-family: "Arial", sans-serif;
+  color: #ffffff;
 }
 
 .industries-description-text {
@@ -15528,6 +15541,7 @@ body {
   margin-bottom: 20px;
   line-height: 1.2;
   letter-spacing: 2px;
+  color: #ffffff;
 }
 
 .career-hero-description {
@@ -15697,6 +15711,8 @@ body {
   background: linear-gradient(120deg, #f0f2f5, #e0e5eb);
   font-family: "Poppins", sans-serif;
   color: #333;
+  margin: 0;
+  padding-top: 80px; /* Adjust based on navbar height */
 }
 
 /* Main Container */
@@ -15707,6 +15723,7 @@ body {
   min-height: 100vh;
   padding: 40px 5%;
   flex-wrap: wrap;
+  margin-top: 20px; /* Ensures it doesn't overlap with navbar */
 }
 
 /* Left Section */
@@ -15730,7 +15747,7 @@ body {
 /* Right Section */
 .contact-right {
   width: 50%;
-  min-width: 300px; /* Ensures the right section doesn't get too narrow */
+  min-width: 300px;
 }
 
 .contact-right h2 {
@@ -15763,7 +15780,7 @@ body {
   resize: none;
 }
 
-/* Checkbox Label (Left side of the paragraph) */
+/* Checkbox Label */
 .contact-right .checkbox-container {
   display: flex;
   align-items: center;
@@ -15778,7 +15795,7 @@ body {
   height: 16px;
 }
 
-/* Transparent Button (Download with animation) */
+/* Button */
 .btn-transparent {
   background: transparent;
   color: #333;
@@ -15797,11 +15814,11 @@ body {
 .btn-transparent:hover {
   background: #000;
   color: #fff;
-  transform: translateY(-4px); /* Lift effect on hover */
+  transform: translateY(-4px);
 }
 
 .btn-transparent:active {
-  transform: translateY(0); /* Return to normal on click */
+  transform: translateY(0);
 }
 
 /* Responsive Design */
@@ -15809,6 +15826,7 @@ body {
   .contact-container {
     flex-direction: column;
     text-align: center;
+    margin-top: 100px; /* Push content below navbar */
   }
 
   .contact-left,
@@ -16099,4 +16117,115 @@ body {
     font-size: 20px;
     padding: 14px;
   }
+}
+
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* Glassmorphism Container */
+.job-application-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Card with Glass Effect */
+.job-application-card {
+  background: #17ad1e;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+}
+
+/* Title */
+.job-application-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.job-application-title span {
+  color: #ffcc00;
+}
+
+.job-application-subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.job-application-form input,
+.file-label {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+.job-application-form input {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  outline: none;
+}
+
+.job-application-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.file-label {
+  display: block;
+  cursor: pointer;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  text-align: center;
+}
+
+.file-label:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Submit Button */
+.job-submit-button {
+  width: 100%;
+  padding: 12px;
+  background: #ffcc00;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.job-submit-button:hover {
+  background: #f1b500;
+}
+
+/* Success/Error Message */
+.message {
+  margin-bottom: 15px;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+}
+
+.message::before {
+  content: "📩 ";
 }

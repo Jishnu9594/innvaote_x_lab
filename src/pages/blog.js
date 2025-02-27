@@ -7,7 +7,7 @@ const BlogSection = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/innovatex/blogs/") // Update with your actual API endpoint
+      .get("https://innovate-x-lab-backend.onrender.com/innovatex/blogs/") // Update with your actual API endpoint
       .then((response) => {
         setBlogPosts(response.data);
       })
@@ -22,7 +22,7 @@ const BlogSection = () => {
   return (
     <div className="blog-section">
       <div className="blog-header">
-        <h1 className="blog-section-title">InnovateX Labs Blog</h1>
+        <h1 className="blog-section-title">InnovateX Lab Blog</h1>
         <p className="blog-section-description">
           Stay updated with the latest trends and insights in software
           development, AI, and more.

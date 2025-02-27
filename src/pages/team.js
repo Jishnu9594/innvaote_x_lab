@@ -7,7 +7,7 @@ const TeamSection = () => {
   useEffect(() => {
     // Fetch team members from backend
     axios
-      .get("http://127.0.0.1:8000/innovatex/teams/")
+      .get("https://innovate-x-lab-backend.onrender.com/innovatex/teams/")
       .then((response) => {
         setTeamMembers(response.data);
       })

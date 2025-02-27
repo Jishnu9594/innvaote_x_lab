@@ -11,19 +11,74 @@ const Contact = () => {
     consent: false,
   });
 
+  const [loading, setLoading] = useState(false); // To show loading state
+  const [error, setError] = useState(null); // To show error message
+  const [success, setSuccess] = useState(null); // To show success message
+
+  // Handle text input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Handle checkbox change
   const handleCheckboxChange = (e) => {
     setFormData({ ...formData, consent: e.target.checked });
   };
 
-  const handleSubmit = (e) => {
+  // Handle form submission
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Submitted", formData);
+    setLoading(true);
+    setError(null);
+    setSuccess(null);
+
+    const formDataToSend = {
+      first_name: formData.firstName,
+      last_name: formData.lastName,
+      phone: formData.phone,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      consent: formData.consent,
+    };
+
+    try {
+      const response = await fetch(
+        "https://innovate-x-lab-backend.onrender.com/innovatex/contact/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formDataToSend),
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        setError("Failed to send message. Please try again.");
+        console.error("Error:", errorData);
+      } else {
+        setSuccess("Message sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          subject: "",
+          message: "",
+          consent: false,
+        });
+      }
+    } catch (error) {
+      setError("Network error. Please try again.");
+      console.error("Network error:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
+  // Handle Brochure Download
   const handleDownload = () => {
     const brochureUrl = "/brochure.pdf"; // Update with actual brochure path
     const link = document.createElement("a");
@@ -48,6 +103,8 @@ const Contact = () => {
 
       <div className="contact-right">
         <h2>Contact Us</h2>
+        {error && <p className="error-message">{error}</p>}
+        {success && <p className="success-message">{success}</p>}
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -109,8 +166,8 @@ const Contact = () => {
               data for the purpose of handling my enquiry.
             </label>
           </div>
-          <button type="submit" className="btn-transparent">
-            Send Message
+          <button type="submit" className="btn-transparent" disabled={loading}>
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>

@@ -4,7 +4,7 @@ const ClientsSection = () => {
   const [clients, setClients] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/innovatex/clients/") // Adjust API URL if necessary
+    fetch("https://innovate-x-lab-backend.onrender.com/innovatex/clients/") // Adjust API URL if necessary
       .then((response) => response.json())
       .then((data) => setClients(data))
       .catch((error) => console.error("Error fetching clients:", error));

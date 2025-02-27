@@ -7,7 +7,9 @@ const CaseStudyPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/innovatex/case-studies/list/")
+      .get(
+        "https://innovate-x-lab-backend.onrender.com/innovatex/case-studies/list/"
+      )
       .then((response) => {
         setCaseStudies(response.data);
         setLoading(false);

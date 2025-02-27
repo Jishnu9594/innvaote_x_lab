@@ -8,7 +8,9 @@ const TestimonialSection = () => {
   useEffect(() => {
     // Fetch testimonials from backend
     axios
-      .get("http://127.0.0.1:8000/innovatex/testimonials/")
+      .get(
+        "https://innovate-x-lab-backend.onrender.com/innovatex/testimonials/"
+      )
       .then((response) => {
         setTestimonials(response.data);
       })

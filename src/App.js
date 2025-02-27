@@ -5,6 +5,7 @@ import Services from "./pages/servicesmain";
 import Career from "./pages/carreermain";
 import BlogMain from "./pages/blogmain";
 import ContactMain from "./pages/contactmain";
+import JobApplicationForm from "./pages/jobform";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/careers" element={<Career />} />
           <Route path="/blog" element={<BlogMain />} />
           <Route path="/contact" element={<ContactMain />} />
+          <Route path="/apply" element={<JobApplicationForm />} />
         </Routes>
       </Router>
     </div>

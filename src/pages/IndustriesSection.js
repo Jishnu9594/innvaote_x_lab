@@ -7,7 +7,7 @@ const IndustriesSection = () => {
       <div className="industries-intro">
         <h2 className="industries-heading-text">Industries We Serve</h2>
         <p className="industries-description-text">
-          At Innovatex Labs, we work with a wide range of industries to deliver
+          At Innovatex Lab, we work with a wide range of industries to deliver
           solutions that drive innovation, growth, and efficiency. Our team is
           committed to understanding the unique challenges of each sector and
           providing tailored solutions.
